@@ -1,10 +1,12 @@
 # Twenty-one
 
+## The rules for cards
+
 ```
 A standard deck of 52 cards is used. The ace is worth 1 or 14 points which is now the most advantageous for the hand in question, a king is worth 13, a queen 12, a jack 11 and other cards his denomination. It is important to get as close to as possible, the sum of 21 on two or more cards.
 ```
 
-## For instance
+### For instance
 
 ```
 The hand gives all players a card each from the draw pile. Given does not take any cards herself.
@@ -25,7 +27,7 @@ The player and the dealer compare the sums of their hands and the one with the h
 If the sums are equal, the given wins.
 ```
 
-## Requirement for individual project
+### Requirement for individual project
 
 ```
 You will create an individual project, which will be what you are examined on in the course Basic Programming in Python.
