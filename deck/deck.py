@@ -5,5 +5,6 @@ Supervisor: Joakim Wassberg
 Version 1.2.0
 """
 
-class  Deck:
-  pass 
+
+class Deck:
+    pass
