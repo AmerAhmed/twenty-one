@@ -5,5 +5,6 @@ Supervisor: Joakim Wassberg
 Version 1.2.0
 """
 
-class  Player:
-  pass 
+
+class Player:
+    pass
