@@ -7,6 +7,15 @@ Version 1.2.0
 
 
 class Card:
+    """
+    A class for creating Card and each
+    Card object has a face_value nd value.
+    Encapsulation is the packing of data
+    and methods into a class so that I can
+    hide the information and restrict access from outside.
+    With private attributes double underscores(__) to use the name mangling.
+    """
+
     def __init__(self, face_value, value):
         self.__face_value = face_value
         self.__value = value
