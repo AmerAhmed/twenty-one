@@ -11,8 +11,13 @@ def deal_cards(limit, max_cards):
     return cards
 
 
-def remove_cards_from_deck():
-    pass
+def remove_cards_from_deck(deck, cards):
+    # With reverse set equal to True to
+    # sort cards in reverse order.
+    cards.sort(reverse=True)
+    for card in cards:
+        deck.pop(card)
+    return deck
 
 
 def calculate_score():
