@@ -3,9 +3,10 @@
 ## The rules 
 
 ```
-A standard deck of 52 cards is used. The ace is worth 1 or 14. Numbered cards are worth their value.
-Picture cards are worth 10. The closest to 21 between player and the dealer is the winner. 
-If player go over 21 player that means it is busts. Player can only see one of the dealer's cards.
+A standard deck of 52 cards is used. The ace is worth 1 or 14. 
+Numbered cards are worth their value. Picture cards are worth 10.
+The closest to 21 between player and the dealer is the winner. 
+If player go over 21 player that means it is busts. So player can only see one of the dealer's cards.
 Hit to take another card. 'Stand' to keep what player have and compare with the dealer. 
 If player and the dealer have the same score which is less than 21, then the dealer wins.
 ```
