@@ -2,6 +2,7 @@ import functools
 import random
 
 from deck.deck import Deck
+from game.game import Dealer, Player
 from hand.hand import Hand
 from terminal_color import color_print
 
@@ -38,7 +39,7 @@ def calculate_score(_player, cards):
 
 def hit(deck, player):
     color_print('blue', '..... Hitting .....')
-    cards = deal_cards(len(deck)-1, 1)
+    cards = deal_cards(len(deck) - 1, 1)
     new_card = deck[cards[0]]
     player.hand.take_card(new_card)
     player.score = calculate_score(player, player.hand.cards)
@@ -65,7 +66,7 @@ def start_game(dealer, player, player_bet):
     new_deck = Deck()
     new_deck.shuffle()
 
-    cards = deal_cards(len(new_deck.deck)-1, 4)
+    cards = deal_cards(len(new_deck.deck) - 1, 4)
 
     dealer_hand = Hand([new_deck.deck[cards[1]],
                         new_deck.deck[cards[3]]])
@@ -95,3 +96,48 @@ def start_game(dealer, player, player_bet):
                 new_deck.deck = hit(new_deck.deck, dealer)
         except (Exception,):
             print('What are you playing at?')
+
+
+def run_game():
+    color_print('blue', '====== Welcome To Twenty Gne Game! =======')
+    while True:
+        try:
+            player_chips = int(input('\nPlease enter the chip balance: (1-1000) '))
+            break
+        except (Exception,):
+            print("Sorry I don't understand...\n")
+
+    cash_out = False
+    dealer = Dealer()
+    player = Player()
+    player.chips = player_chips
+
+    while not cash_out and player_chips > 0:
+        try:
+            color_print('green', f'\nRight now your chip balance is: ({player.chips})')
+            player_bet = int(input('\nPlease bet! The minimal bet is 1 chip: '))
+            if player_bet > player_chips:
+                color_print('yellow', 'You don\'t have the readies mate...\n')
+            else:
+                start_game(dealer, player, player_bet)
+                try:
+                    if player_chips != 0:
+                        quit_command = input('\nWould you like to continue? (Y/N) ')
+                        if quit_command.lower() == 'n':
+                            cash_out = True
+                    else:
+                        break
+                except (Exception,):
+                    color_print('yellow', "Sorry I don't understand.\n")
+        except (Exception,):
+            color_print('yellow', "Sorry I don't understand\n")
+            continue
+    try:
+        play_again = input('\nWould you like to play fancy game again? (Y/N) ')
+        if play_again.lower() == 'y':
+            run_game()
+        else:
+            color_print('blue', '\nTHANK YOU FOR PLAYING AND SEE YOU NEXT TIME!')
+            return
+    except (Exception,):
+        color_print('yellow', "Sorry I don't understand\n")
