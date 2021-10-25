@@ -58,8 +58,24 @@ def display_details(dealer, player, player_bet):
     print(f'Player Score ({player.score})')
 
 
-def award_winnings():
-    pass
+def award_winnings(dealer, player):
+    print('\nDealer:')
+    print(dealer.hand)
+    color_print('blue', '\t\n====Final Result====')
+    print(f'Dealer Score: ({dealer.score})')
+    print(f'Player Score: ({player.score})')
+    if player.score > 21:
+        color_print('red', 'Player: BUSTED!')
+        color_print('blue', '====================')
+        return False
+    elif 21 >= player.score > dealer.score or (dealer.score > 21 >= player.score):
+        color_print('green', 'Player: wins!')
+        color_print('blue', '====================')
+        return True
+    else:
+        color_print('green', 'Dealer: wins')
+        color_print('blue', '====================')
+        return False
 
 
 def start_game(dealer, player, player_bet):
