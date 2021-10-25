@@ -4,11 +4,11 @@ Author Amer Ahmed
 Supervisor: Joakim Wassberg
 Version 1.2.0
 """
-from terminal_color import color_print
+from modules.modules import run_game
 
 
 def main():
-    color_print('blue', '====== Welcome To Twenty Gne Game! =======')
+    run_game()
 
 
 if __name__ == '__main__':

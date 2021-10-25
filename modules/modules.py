@@ -158,7 +158,7 @@ def run_game():
         if play_again.lower() == 'y':
             run_game()
         else:
-            color_print('blue', '\nTHANK YOU FOR PLAYING AND SEE YOU NEXT TIME!')
+            color_print('yellow', '\nTHANK YOU FOR PLAYING AND SEE YOU NEXT TIME!')
             return
     except (Exception,):
         color_print('yellow', "Sorry I don't understand\n")
