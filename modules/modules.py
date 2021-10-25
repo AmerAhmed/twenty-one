@@ -43,8 +43,15 @@ def hit(deck, player):
     return deck
 
 
-def display_details():
-    pass
+def display_details(dealer, player, player_bet):
+    print('\nDealer:')
+    print(dealer.hand.cards[0])
+    print('\nPlayer:')
+    print(player.hand)
+    print(f'Current Bet: {player_bet}')
+    print('===================\n')
+    player.score = calculate_score(player, player.hand.cards)
+    print(f'Player Score ({player.score})')
 
 
 def award_winnings():
