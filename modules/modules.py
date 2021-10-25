@@ -1,4 +1,5 @@
 import random
+from terminal_color import color_print
 
 
 def deal_cards(limit, max_cards):
@@ -21,7 +22,7 @@ def remove_cards_from_deck(deck, cards):
 
 
 def calculate_score():
-    pass
+    color_print('blue', '..... Hitting .....')
 
 
 def hit():
