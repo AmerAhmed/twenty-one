@@ -22,11 +22,11 @@ def remove_cards_from_deck(deck, cards):
 
 
 def calculate_score():
-    color_print('blue', '..... Hitting .....')
+    pass
 
 
 def hit():
-    pass
+    color_print('blue', '..... Hitting .....')
 
 
 def display_details():
