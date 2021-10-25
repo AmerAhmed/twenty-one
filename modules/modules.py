@@ -1,3 +1,4 @@
+import functools
 import random
 from terminal_color import color_print
 
@@ -21,8 +22,15 @@ def remove_cards_from_deck(deck, cards):
     return deck
 
 
-def calculate_score():
-    pass
+def calculate_score(_player, cards):
+    card_values = [card.value for card in cards]
+    # FuncTools-for working with function and callable objects
+    score = functools.reduce(lambda x, y: x + y, card_values)
+    if score <= 11:
+        for value in card_values:
+            if value == 1 and (score + 10) <= 21:
+                score += 10
+    return score
 
 
 def hit():
