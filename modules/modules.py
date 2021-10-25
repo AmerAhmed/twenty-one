@@ -1,5 +1,8 @@
 import functools
 import random
+
+from deck.deck import Deck
+from hand.hand import Hand
 from terminal_color import color_print
 
 
@@ -58,5 +61,37 @@ def award_winnings():
     pass
 
 
-def run_game():
-    pass
+def start_game(dealer, player, player_bet):
+    new_deck = Deck()
+    new_deck.shuffle()
+
+    cards = deal_cards(len(new_deck.deck)-1, 4)
+
+    dealer_hand = Hand([new_deck.deck[cards[1]],
+                        new_deck.deck[cards[3]]])
+    player_hand = Hand([new_deck.deck[cards[0]],
+                        new_deck.deck[cards[2]]])
+
+    new_deck.deck = remove_cards_from_deck(new_deck.deck, cards)
+
+    dealer.hand = dealer_hand
+    player.hand = player_hand
+
+    player.score = 0
+    dealer.score = 0
+    display_details(dealer, player, player_bet)
+    while player.score <= 21:
+        try:
+            choice = input('\t\nHit or Stand? (H/S) ')
+            print('===================')
+            if choice.lower() == 'h':
+                new_deck.deck = hit(new_deck.deck, player)
+                display_details(dealer, player, player_bet)
+            if choice.lower() == 's':
+                while dealer.score <= 17:
+                    new_deck.deck = hit(new_deck.deck, dealer)
+                break
+            if dealer.score <= 17:
+                new_deck.deck = hit(new_deck.deck, dealer)
+        except (Exception,):
+            print('What are you playing at?')
