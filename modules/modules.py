@@ -113,6 +113,11 @@ def start_game(dealer, player, player_bet):
         except (Exception,):
             print('What are you playing at?')
 
+    if award_winnings(dealer, player):
+        player.won_bet(player_bet)
+    else:
+        player.lost_bet(player_bet)
+
 
 def run_game():
     color_print('blue', '====== Welcome To Twenty Gne Game! =======')
