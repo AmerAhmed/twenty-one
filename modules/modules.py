@@ -33,8 +33,14 @@ def calculate_score(_player, cards):
     return score
 
 
-def hit():
+def hit(deck, player):
     color_print('blue', '..... Hitting .....')
+    cards = deal_cards(len(deck)-1, 1)
+    new_card = deck[cards[0]]
+    player.hand.take_card(new_card)
+    player.score = calculate_score(player, player.hand.cards)
+    deck = remove_cards_from_deck(deck, cards)
+    return deck
 
 
 def display_details():
