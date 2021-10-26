@@ -4,38 +4,11 @@ Author Amer Ahmed
 Supervisor: Joakim Wassberg
 Version 1.2.0
 """
-
-
-def deal_cards():
-    pass
-
-
-def remove_cards_from_deck():
-    pass
-
-
-def calculate_score():
-    pass
-
-
-def hit():
-    pass
-
-
-def display_details():
-    pass
-
-
-def award_winnings():
-    pass
-
-
-def run():
-    pass
+from modules.modules import run_game
 
 
 def main():
-    print('blue', '=========Welcome To Twenty Gne Game!==========')
+    run_game()
 
 
 if __name__ == '__main__':

@@ -7,6 +7,13 @@ Version 1.2.0.
 
 
 class SuperGame:
+    """
+    A class for creating SuperGame
+    participants, namely the Dealer and the Player.
+    An SuperGame have some chips in order to play.
+    Chips are set to 0 by default so the Dealer will not have any.
+    """
+
     def __init__(self, hand=None, chips=0, score=0):
         self.__hand = hand
         self.__chips = chips
@@ -38,11 +45,11 @@ class SuperGame:
 
 
 class Dealer(SuperGame):
+    """For the Dealer is simply pass"""
     pass
 
 
 class Player(SuperGame):
-
     def lost_bet(self, val):
         self.chips -= val
 
