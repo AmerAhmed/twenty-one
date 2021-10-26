@@ -68,6 +68,7 @@ def award_winnings(dealer, player):
         color_print('red', 'Player: BUSTED!')
         color_print('blue', '====================')
         return False
+    # elif player.score <= 21 and player.score > dealer.score or (dealer.score > 21 and player.score <= 21):
     elif 21 >= player.score > dealer.score or (dealer.score > 21 >= player.score):
         color_print('green', 'Player: wins!')
         color_print('blue', '====================')
