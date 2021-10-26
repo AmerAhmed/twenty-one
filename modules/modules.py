@@ -135,7 +135,7 @@ def run_game():
 
     while not cash_out and player_chips > 0:
         try:
-            color_print('green', f'\nRight now your chip balance is: ({player.chips})')
+            color_print('green', f'\nRight now your chip balance is: (${player.chips})')
             player_bet = int(input('\nPlease bet! The minimal bet is 1 chip: '))
             if player_bet > player_chips:
                 color_print('yellow', 'You don\'t have the readies mate...\n')
