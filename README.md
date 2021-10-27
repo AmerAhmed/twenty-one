@@ -13,6 +13,7 @@ If player and the dealer have the same score which is less than or equal to 21, 
 ```
 
 Just run  `main.py` 
+Just run ` python3 -m unittest tests/test_modules.py`
 
 ### Requirement for individual project
 
