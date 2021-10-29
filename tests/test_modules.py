@@ -35,6 +35,13 @@ class DeckTestCase(unittest.TestCase):
         second_deck.shuffle()
         self.assertNotEqual(str(first_deck), str(second_deck))
 
+    def test_deal_removes_a_card(self):
+        #  Does a deal remove one card from the deck?
+        deck = Deck()
+        the_number_before = len(deck.deck)
+        the_number_after = len(deck.deck)
+        self.assertEqual(the_number_before, the_number_after)
+
 
 if __name__ == '__main__':
     unittest.main()
