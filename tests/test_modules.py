@@ -1,9 +1,11 @@
 import unittest
 from card.card import Card
+from deck.deck import Deck
 
 
 class CardTestCase(unittest.TestCase):
     # Unit tests for Card class
+
     def test_card_representation(self):
         # Is card representation correct?
         card = Card("A", "\u2666")
@@ -19,7 +21,11 @@ class CardTestCase(unittest.TestCase):
 
 class DeckTestCase(unittest.TestCase):
     # Unit tests for Deck class
-    pass
+
+    def test_size_of_deck(self):
+        # Are there 52 cards in the deck?
+        new_deck = Deck()
+        self.assertTrue(len(new_deck.deck), 52)
 
 
 if __name__ == '__main__':
