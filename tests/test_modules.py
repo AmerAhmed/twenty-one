@@ -17,5 +17,10 @@ class CardTestCase(unittest.TestCase):
         self.assertTrue(card.face_value)
 
 
+class DeckTestCase(unittest.TestCase):
+    # Unit tests for Deck class
+    pass
+
+
 if __name__ == '__main__':
     unittest.main()
