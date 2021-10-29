@@ -11,6 +11,11 @@ class CardTestCase(unittest.TestCase):
         card = Card("10", "\u2666")
         self.assertEqual(str(card), "10")
 
+    def test_card_is_ace(self):
+        # Is an Ace recognised correctly?
+        card = Card("A", "\u2666")
+        self.assertTrue(card.face_value)
+
 
 if __name__ == '__main__':
     unittest.main()
