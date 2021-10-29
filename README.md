@@ -11,8 +11,9 @@ So player can only see one of the dealer's cards.
 Hit to take another card. 'Stand' to keep what player have and compare with the dealer. 
 If player and the dealer have the same score which is less than or equal to 21, the dealer still wins.
 ```
-
-Just run  `main.py` 
+You can  run  `main.py` 
+You can run tests with more detail (higher verbosity) by passing in the -v flag
+` python3 -m unittest -v tests/test_modules.py`
 
 ### Requirement for individual project
 
