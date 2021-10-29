@@ -27,6 +27,14 @@ class DeckTestCase(unittest.TestCase):
         new_deck = Deck()
         self.assertTrue(len(new_deck.deck), 52)
 
+    def test_shuffle_randomizes_deck(self):
+        # Does the deck get shuffled?
+        first_deck = Deck()
+        first_deck.shuffle()
+        second_deck = Deck()
+        second_deck.shuffle()
+        self.assertNotEqual(str(first_deck), str(second_deck))
+
 
 if __name__ == '__main__':
     unittest.main()
