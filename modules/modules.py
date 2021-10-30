@@ -121,7 +121,7 @@ def start_game(dealer, player, player_bet):
 
 
 def run_game():
-    color_print('blue', '====== Welcome To Twenty Gne Game! =======')
+    color_print('blue', '====== Welcome To Twenty One Game! =======')
     while True:
         try:
             player_chips = int(input('\nPlease enter the chip balance: (1-1000) '))

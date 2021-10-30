@@ -1,5 +1,5 @@
 """
-Module for main Game
+The main script for Twenty One Game
 Author Amer Ahmed
 Supervisor: Joakim Wassberg
 Version 1.2.0
