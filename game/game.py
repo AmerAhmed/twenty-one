@@ -45,7 +45,7 @@ class SuperGame:
 
 
 class Dealer(SuperGame):
-    """For the Dealer is simply pass"""
+    # For the Dealer is simply pass
     pass
 
 
