@@ -34,18 +34,12 @@ class Deck:
         'K': 10
     }
 
-    __suits = [
-        '\u2666',
-        '\u2665',
-        '\u2663',
-        '\u2660'
-    ]
+    # Suits is a set of 4 Unicode symbols
+    __suits = ['\u2666', '\u2665', '\u2663', '\u2660']
 
     def __init__(self):
         self.__deck = [Card(value + suit, self.__card_values[value])
-                       for suit in self.__suits
-                       for value in self.__card_values
-                       ]
+                       for suit in self.__suits for value in self.__card_values]
 
     @property
     def deck(self):
