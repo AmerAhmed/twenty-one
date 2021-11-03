@@ -16,7 +16,7 @@ You can run the main script `main.py`
 ### Run tests with more detail higher verbosity by using -v flag
 `python3 -m unittest -v tests/test_modules.py`
 
-![The screen-shot of test!](assets/sreen-shot.png "Ran 5 tests in 0.001s")
+![The screenshot of test!](assets/screenshot.png "Ran 5 tests in 0.001s")
 ***
 
 ### Requirement for individual project
