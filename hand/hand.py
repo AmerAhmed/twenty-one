@@ -11,9 +11,8 @@ class Hand:
     A class for creating a Hand of Cards.
     An instance of Hand takes a list of
     Card objects as an argument which
-    becomes the players hand for a single
-    round. The take_card  method adds a
-    new card to the hand
+    becomes the players hand for a single round.
+    The take_card method adds a new card to the hand
     """
 
     def __init__(self, cards):
@@ -27,7 +26,7 @@ class Hand:
         return self.__cards
 
     def __str__(self):
-        card_string = ''
+        card_str = ''
         for card in self.cards:
-            card_string += card.face_value + '\n'
-        return card_string
+            card_str += card.face_value + '\n'
+        return card_str
