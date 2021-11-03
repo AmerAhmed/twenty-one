@@ -112,7 +112,7 @@ def start_play(dealer, player, player_bet):
             if dealer.score <= 17:
                 new_deck.deck = hit(new_deck.deck, dealer)
         except (Exception,):
-            print('What are you playing at?')
+            print('Oops!  What are you playing at?')
 
     if award_winnings(dealer, player):
         player.won_bet(player_bet)
@@ -127,7 +127,7 @@ def run_play():
             player_chips = int(input('\nHow many chips do you want to buy: (1-1000) '))
             break
         except (Exception,):
-            print("Sorry I don't understand...\n")
+            print("Oops! Sorry I don't understand...\n")
 
     cash_out = False
     dealer = Dealer()
@@ -150,9 +150,9 @@ def run_play():
                     else:
                         break
                 except (Exception,):
-                    color_print('yellow', "Sorry I don't understand.\n")
+                    color_print('yellow', "Oops! Sorry I don't understand.\n")
         except (Exception,):
-            color_print('yellow', "Sorry I don't understand\n")
+            color_print('yellow', "Oops!  Sorry I don't understand\n")
             continue
     try:
         play_again = input('\nWould you like to play fancy game again? (Y/N) ')
@@ -162,4 +162,4 @@ def run_play():
             color_print('yellow', '\nTHANK YOU FOR PLAYING AND SEE YOU NEXT TIME!')
             return
     except (Exception,):
-        color_print('yellow', "Sorry I don't understand\n")
+        color_print('yellow', "Oops! Sorry I don't understand\n")
