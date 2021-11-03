@@ -152,7 +152,7 @@ def run_game():
                 except (Exception,):
                     color_print('yellow', "Oops! Sorry I don't understand.\n")
         except (Exception,):
-            color_print('yellow', "Oops!  Sorry I don't understand\n")
+            color_print('yellow', "Oops! Sorry I don't understand\n")
             continue
     try:
         play_again = input('\nWould you like to play fancy game again? (Y/N) ')
