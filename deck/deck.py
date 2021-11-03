@@ -14,7 +14,8 @@ class Deck:
     A class for creating a Deck of Cards.
     A full deck of 52 cards is created and
     can be accessed as a list or as a string.
-    Deck exposes a (shuffle method).
+    Deck exposes a (shuffle method) method that
+    will pseudo-randomly reorganise the list of cards
     """
 
     __card_values = {
