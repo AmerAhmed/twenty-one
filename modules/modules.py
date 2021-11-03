@@ -79,7 +79,7 @@ def award_winnings(dealer, player):
         return False
 
 
-def start_game(dealer, player, player_bet):
+def start_the_game(dealer, player, player_bet):
     new_deck = Deck()
     new_deck.shuffle()
 
@@ -141,7 +141,7 @@ def run_game():
             if player_bet > player_chips:
                 color_print('yellow', 'You don\'t have the readies mate...\n')
             else:
-                start_game(dealer, player, player_bet)
+                start_the_game(dealer, player, player_bet)
                 try:
                     if player_chips != 0:
                         quit_command = input('\nWould you like to continue? (Y/N) ')
