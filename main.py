@@ -5,11 +5,11 @@ Supervisor: Joakim Wassberg
 Version 1.2.0
 """
 
-from modules.modules import run_game
+from modules.modules import run_play
 
 
 def main():
-    run_game()
+    run_play()
 
 
 if __name__ == '__main__':
