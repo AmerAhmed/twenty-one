@@ -121,7 +121,7 @@ def start_play(dealer, player, player_bet):
 
 
 def run_play():
-    color_print('magenta', '====== Welcome To Twenty One Game Casino! =======')
+    color_print('magenta', '====== Welcome To Twenty One Casino! =======')
     while True:
         try:
             player_chips = int(input('\nHow many chips do you want to buy: (1-1000) '))
