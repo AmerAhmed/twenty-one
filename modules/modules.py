@@ -79,7 +79,7 @@ def award_winnings(dealer, player):
         return False
 
 
-def start_play(dealer, player, player_bet):
+def start_the_game(dealer, player, player_bet):
     new_deck = Deck()
     new_deck.shuffle()
 
@@ -120,7 +120,7 @@ def start_play(dealer, player, player_bet):
         player.lost_bet(player_bet)
 
 
-def run_play():
+def run_game():
     color_print('magenta', '====== Welcome To Twenty One Casino! =======')
     while True:
         try:
@@ -141,7 +141,7 @@ def run_play():
             if player_bet > player_chips:
                 color_print('yellow', 'You don\'t have the readies mate...\n')
             else:
-                start_play(dealer, player, player_bet)
+                start_the_game(dealer, player, player_bet)
                 try:
                     if player_chips != 0:
                         quit_command = input('\nWould you like to continue? (Y/N) ')
@@ -152,12 +152,12 @@ def run_play():
                 except (Exception,):
                     color_print('yellow', "Oops! Sorry I don't understand.\n")
         except (Exception,):
-            color_print('yellow', "Oops!  Sorry I don't understand\n")
+            color_print('yellow', "Oops! Sorry I don't understand\n")
             continue
     try:
         play_again = input('\nWould you like to play fancy game again? (Y/N) ')
         if play_again.lower() == 'y':
-            run_play()
+            run_game()
         else:
             color_print('yellow', '\nTHANK YOU FOR PLAYING AND SEE YOU NEXT TIME!')
             return
