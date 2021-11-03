@@ -1,17 +1,19 @@
 """
-Module for SuperGame
+Module for TwentyOnGame
 Author Amer Ahmed
 Supervisor: Joakim Wassberg
 Version 1.2.0.
 """
 
 
-class SuperGame:
+class TwentyOnGame:
     """
-    A class for creating SuperGame
-    participants, namely the Dealer and the Player.
-    An SuperGame have some chips in order to play.
-    Chips are set to 0 by default so the Dealer will not have any.
+    A class for creating TwentyOnGame
+    participants, namely the Dealer and
+    the Player. An TwentyOnGame must have
+    a Hand  and player must have some chips
+    in order to play. Chips is set to 0 by
+    default so the Dealer will not have any.
     """
 
     def __init__(self, hand=None, chips=0, score=0):
@@ -44,12 +46,12 @@ class SuperGame:
         self.__score = val
 
 
-class Dealer(SuperGame):
+class Dealer(TwentyOnGame):
     # For the Dealer is simply pass
     pass
 
 
-class Player(SuperGame):
+class Player(TwentyOnGame):
     def lost_bet(self, val):
         self.chips -= val
 
