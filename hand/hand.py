@@ -12,7 +12,7 @@ class Hand:
     An instance of Hand takes a list of
     Card objects as an argument which
     becomes the players hand for a single round.
-    The take_card method adds a new card to the hand
+    The take_card method adds a new card to the hand.
     """
 
     def __init__(self, cards):
@@ -28,7 +28,7 @@ class Hand:
     def __str__(self):
         """
         This method returns the string
-        representation of the object.
+        representation of the object
         """
         card_str = ''
         for card in self.cards:

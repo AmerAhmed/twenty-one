@@ -35,8 +35,7 @@ class Deck:
         'K': 10
     }
 
-    # 4 Unicode symbols of suits
-    # Private class attribute
+    # 4 Unicode symbols of suits and Private class attribute
     __SUITS = ['\u2666', '\u2665', '\u2663', '\u2660']
 
     def __init__(self):
