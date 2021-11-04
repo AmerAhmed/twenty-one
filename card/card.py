@@ -15,13 +15,13 @@ class Card:
     how many points the Card is worth in the game
     """
 
-    def __init__(self, face_value, value):
-        self.__face_value = face_value
+    def __init__(self, suit, value):
+        self.__suit = suit
         self.__value = value
 
     @property
-    def face_value(self):
-        return self.__face_value
+    def suit(self):
+        return self.__suit
 
     @property
     def value(self):
@@ -32,4 +32,4 @@ class Card:
         self.__value = val
 
     def __str__(self):
-        return f'{self.face_value}'
+        return f'{self.suit}'

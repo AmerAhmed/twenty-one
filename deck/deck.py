@@ -18,7 +18,7 @@ class Deck:
     will pseudo-randomly reorganise the list of cards
     """
 
-    __card_values = {
+    __VALUES = {
         'A': 1,
         '2': 2,
         '3': 3,
@@ -35,11 +35,11 @@ class Deck:
     }
 
     # Suits is a set of 4 Unicode symbols
-    __suits = ['\u2666', '\u2665', '\u2663', '\u2660']
+    __SUITS = ['\u2666', '\u2665', '\u2663', '\u2660']
 
     def __init__(self):
-        self.__deck = [Card(value + suit, self.__card_values[value])
-                       for suit in self.__suits for value in self.__card_values]
+        self.__deck = [Card(value + suit, self.__VALUES[value])
+                       for suit in self.__SUITS for value in self.__VALUES]
 
     @property
     def deck(self):

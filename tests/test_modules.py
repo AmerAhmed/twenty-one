@@ -16,7 +16,7 @@ class CardTestCase(unittest.TestCase):
     def test_card_is_ace(self):
         # Is an Ace recognised correctly?
         card = Card("A", "\u2666")
-        self.assertTrue(card.face_value)
+        self.assertTrue(card.suit)
 
 
 class DeckTestCase(unittest.TestCase):
