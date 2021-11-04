@@ -16,7 +16,7 @@ class Hand:
     """
 
     def __init__(self, cards):
-        self.__cards = cards
+        self.__cards = cards  # Private instance attribute
 
     def take_card(self, card):
         self.__cards.append(card)
@@ -26,6 +26,10 @@ class Hand:
         return self.__cards
 
     def __str__(self):
+        """
+        This method returns the string
+        representation of the object.
+        """
         card_str = ''
         for card in self.cards:
             card_str += card.suit + '\n'

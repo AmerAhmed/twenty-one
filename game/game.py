@@ -17,9 +17,9 @@ class TwentyOnGame:
     """
 
     def __init__(self, hand=None, chips=0, score=0):
-        self.__hand = hand
-        self.__chips = chips
-        self.__score = score
+        self.__hand = hand    # Private instance attribute
+        self.__chips = chips  # Private instance attribute
+        self.__score = score  # Private instance attribute
 
     @property
     def hand(self):

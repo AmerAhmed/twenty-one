@@ -16,8 +16,8 @@ class Card:
     """
 
     def __init__(self, suit, value):
-        self.__suit = suit
-        self.__value = value
+        self.__suit = suit    # Private instance attribute
+        self.__value = value  # Private instance attribute
 
     @property
     def suit(self):
