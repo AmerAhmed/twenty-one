@@ -26,8 +26,7 @@ class Hand:
         return self.__cards
 
     def __str__(self):
-        # This method returns the string
-        # representation of the object.
+        """This method returns the string representation of the object"""
         card_str = ''
         for card in self.cards:
             card_str += card.suit + '\n'
