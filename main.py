@@ -5,7 +5,7 @@ Supervisor: Joakim Wassberg
 Version 1.2.0
 """
 
-from modules.modules import run_game
+from modules.run import run_game
 
 
 def main():

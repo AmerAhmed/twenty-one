@@ -18,6 +18,7 @@ class Deck:
     will pseudo-randomly reorganise the list of cards
     """
 
+    # Private class attribute
     __VALUES = {
         'A': 1,
         '2': 2,
@@ -34,7 +35,8 @@ class Deck:
         'K': 10
     }
 
-    # Suits is a set of 4 Unicode symbols
+    # 4 Unicode symbols of suits
+    # Private class attribute
     __SUITS = ['\u2666', '\u2665', '\u2663', '\u2660']
 
     def __init__(self):
