@@ -1,6 +1,5 @@
 import functools
 import random
-
 from deck.deck import Deck
 from game.game import Dealer, Player
 from hand.hand import Hand

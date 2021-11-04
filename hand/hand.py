@@ -28,5 +28,5 @@ class Hand:
     def __str__(self):
         card_str = ''
         for card in self.cards:
-            card_str += card.face_value + '\n'
+            card_str += card.suit + '\n'
         return card_str
