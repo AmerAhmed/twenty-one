@@ -4,10 +4,10 @@ from terminal_color import color_print
 
 
 def run_game():
-    color_print('magenta', '====== Welcome To Twenty One Casino! =======')
+    color_print('magenta', '\n======= Welcome To Twenty One Casino! ========')
     while True:
         try:
-            player_chips = int(input('\nHow many chips do you want to buy: (1-1000) '))
+            player_chips = int(input('\nHow Many Chips Do You Want To Buy: (1-1000) '))
             break
         except (Exception,):
             print("Oops! Sorry I don't understand...\n")
@@ -19,8 +19,8 @@ def run_game():
 
     while not cash_out and player_chips > 0:
         try:
-            color_print('green', f'\nNow your chip balance is: (${player.chips})')
-            player_bet = int(input('\nPlease bet! The minimal bet is 1 chip: '))
+            color_print('green', f'\nNow Your Current Chip Balance is: (${player.chips})')
+            player_bet = int(input('\nPlease Bet! The Minimal Bet is 1 Chip: '))
             if player_bet > player_chips:
                 color_print('yellow', 'You don\'t have the readies mate...\n')
             else:
@@ -42,7 +42,7 @@ def run_game():
         if play_again.lower() == 'y':
             run_game()
         else:
-            color_print('yellow', '\nTHANK YOU FOR PLAYING AND SEE YOU NEXT TIME!')
+            color_print('magenta', '\nTHANK YOU FOR PLAYING AND SEE YOU NEXT TIME!')
             return
     except (Exception,):
         color_print('yellow', "Oops! Sorry I don't understand\n")

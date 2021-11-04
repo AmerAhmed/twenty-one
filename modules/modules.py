@@ -36,7 +36,7 @@ def calculate_score(_player, cards):
 
 
 def hit(deck, player):
-    color_print('blue', '..... Hitting .....')
+    color_print('yellow', '..... Hitting .....')
     cards = deal_cards(len(deck) - 1, 1)
     new_card = deck[cards[0]]
     player.hand.take_card(new_card)
@@ -50,8 +50,8 @@ def display_details(dealer, player, player_bet):
     print(dealer.hand.cards[0])
     print('\nPlayer:')
     print(player.hand)
-    print(f'Current Bet: {player_bet}')
-    print('===================\n')
+    color_print('green', f'Your Current Bet is: (${player_bet})')
+    print('=========================\n')
     player.score = calculate_score(player, player.hand.cards)
     print(f'Player Score ({player.score})')
 
@@ -59,21 +59,21 @@ def display_details(dealer, player, player_bet):
 def award_winnings(dealer, player):
     print('\nDealer:')
     print(dealer.hand)
-    color_print('blue', '\t\n====Final Result====')
+    color_print('blue', '\t\n======Final Result=======')
     print(f'Dealer Score: ({dealer.score})')
     print(f'Player Score: ({player.score})')
     if player.score > 21:
         color_print('red', 'Player: BUSTED!')
-        color_print('blue', '====================')
+        color_print('blue', '=========================')
         return False
     # elif player.score <= 21 and player.score > dealer.score or (dealer.score > 21 and player.score <= 21):
     elif 21 >= player.score > dealer.score or (dealer.score > 21 >= player.score):
         color_print('green', 'Player: wins!')
-        color_print('blue', '====================')
+        color_print('blue', '=========================')
         return True
     else:
         color_print('green', 'Dealer: wins')
-        color_print('blue', '====================')
+        color_print('blue', '=========================')
         return False
 
 
@@ -99,7 +99,7 @@ def start_the_game(dealer, player, player_bet):
     while player.score <= 21:
         try:
             choice = input('\t\nHit or Stand? (H/S) ')
-            print('===================')
+            print('=========================')
             if choice.lower() == 'h':
                 new_deck.deck = hit(new_deck.deck, player)
                 display_details(dealer, player, player_bet)
